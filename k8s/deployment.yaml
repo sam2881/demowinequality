@@ -16,4 +16,4 @@ spec:
       - name: cv-app
         image: gcr.io/nodal-magnet-360615/winedemoapp:v1
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
