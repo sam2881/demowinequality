@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: winedemo
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: winedemoapp
@@ -17,4 +17,3 @@ spec:
         image: gcr.io/nodal-magnet-360615/winedemoapp:v1
         ports:
         - containerPort: 5001
-          protocol: TCP
