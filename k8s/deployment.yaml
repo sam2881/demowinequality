@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: winedemo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: winedemoapp
+  template:
+    metadata:
+      labels:
+        app: winedemoapp
+    spec:
+      containers:
+      - name: cv-app
+        image: gcr.io/nodal-magnet-360615/winedemoapp:v1
+        ports:
+        - containerPort: 5000
